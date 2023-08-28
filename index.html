@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | multi-page form</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+<section class="section">
+  <main>
+      
+  <!-- sidebar starts here -->
+         <sidebar>
+          <article>
+            <span class="step active" data-id="0">1</span>
+            <div class="content">
+              <p>step 1</p>
+              <h2>Your Info</h2>
+            </div>
+          </article>
+
+          <article>
+            <span class="step" data-id="1">2</span>
+            <div class="content">
+              <p>step 2</p>
+              <h2>select plan</h2>
+            </div>
+          </article>
+
+          <article>
+            <span class="step" data-id="2">3</span>
+            <div class="content">
+              <p>step 3</p>
+              <h2>add-ons</h2>
+            </div>
+          </article>
+
+          <article>
+            <span class="step" data-id="3">4</span>
+            <div class="content">
+              <p>step4</p>
+              <h2>summary</h2>
+            </div>
+          </article>
+        </sidebar>
+      <!-- end of sidebar -->
+
+      <section class="form">
+        <div class="testing">
+        <div class="form-wrapper">
+          <!-- begining of single form -->
+          <div class="innerform-wrapper">
+            <h1 class="heading">Personal info</h1>
+            <p>Please provide your name, email address and phone number</p>
+            <form action="">
+              <div class="main-form">
+                  <div class="row">
+                    <div class="warning">
+                      <label for="name">Name</label>
+                    <span class="UsernameWarning"></span> 
+                    </div>
+                    <input type="text" name="name" id="name" placeholder="e.g Stephen King">
+                  </div>
+          
+                  <div class="row">
+                    <div class="warning">
+                    <label for="email">Email</label>
+                    <span class="emailWarning" ></span> 
+                    </div>
+                    <input type="email" name="email" id="email" placeholder="e.g stephenking@lorem.com">
+                  </div>
+          
+                  <div class="row">
+                    <div class="warning">
+                      <label for="phone">Phone Number</label>
+                      <span class="numberWarning" ></span>
+                    </div>
+                    <input type="number" name="Phone" id="phone" placeholder="e.g +1 234 567 890">
+                  </div>
+
+                </div>
+        
+                <div class="btn-container">
+                  <button class="btn-next info-btn" type="button">Next Step</button>
+                </div>
+            </form>
+           
+          </div>
+          
+      
+          <!-- begining of single form 2 -->
+          <div class="innerform-wrapper">
+            <h1 class="heading">Select your plan</h1>
+            <p>You have the option of monthly or yearly billing.</p>
+      
+            <div class="main-form">
+      
+              <div class="plan-wrapper">
+                <!-- monthly plan selection -->
+                <article class="monthlyplan">
+                  <div class="box-container">
+                    <div class="box js_select_plan">
+                      <img src="../assets/images/icon-arcade.svg" alt="">
+                      <div class="content">
+                         <h2>Arcade</h2>
+                         <p>$<span class="plan_price">9</span>/mo</p>
+                      </div>
+                     
+                    </div>
+                
+                    <div class="box js_select_plan">
+                      <img src="../assets/images/icon-advanced.svg" alt="">
+                      <div class="content">
+                        <h2>Advanced</h2>
+                         <p>$<span class="plan_price">12</span>/mo</p>
+                      </div>
+                      
+                    </div>
+                
+                    <div class="box js_select_plan">
+                      <img src="../assets/images/icon-pro.svg" alt="">
+                      <div class="content">
+                        <h2>Pro</h2>
+                         <p>$<span class="plan_price">15</span>/mo</p>
+                      </div>
+                      
+                    </div>
+                
+                  </div>
+                </article>
+                <!-- yearly plan selection -->
+                <article class="yearlyplan">
+                  <div class="box-container">
+              
+                    <div class="box js_select_plan">
+                      <img src="../assets/images/icon-arcade.svg" alt="">
+                      <div class="content">
+                        <h2>Arcade</h2>
+                        <p>$<span class="plan_price">90</span>/yr</p>
+                        <span>2 months free</span> 
+                      </div>
+                      
+                    </div>
+                
+                    <div class="box js_select_plan">
+                      <img src="../assets/images/icon-advanced.svg" alt="">
+                      <div class="content">
+                        <h2>Advanced</h2>
+                        <p>$<span class="plan_price">120</span>/yr</p>
+                        <span>2 months free</span>
+                      </div>
+                      
+                    </div>
+                
+                    <div class="box js_select_plan">
+                      <img src="../assets/images/icon-pro.svg" alt="">
+                      <div class="content">
+                         <h2>Pro</h2>
+                         <p>$<span class="plan_price">150</span> /yr</p>
+                         <span>2 months free</span>
+                      </div>
+                     
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="planselection-toggle">
+                <span class="monthly">Monthly</span>
+                <div class="toggle">
+                  <span></span>
+                </div>
+                <span class="yearly">Yearly</span>
+              </div>
+            </div>
+            <div class="btn-container">
+              <button class="btn-back" type="submit">Go Back</button>
+              <button class="btn-next plan-Nextbtn" type="submit">Next Step</button>
+            </div>
+          </div>
+          
+      
+          <!-- begining of single form 3-->
+          <div class="innerform-wrapper">
+            <h1 class="heading">Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience</p>
+            <div class="main-form">
+              <div class="add-ons-wrapper">
+                <!-- monthly plan selection -->
+                <article class="monthlyplan">
+                  <div class="box-container">
+                    <div class="box jsAddOnBox">
+                      <input type="checkbox" name="Online Service" value="1">
+                      <div class="content" >
+                        <h3>Online services</h2>
+                        <p>Access to multiplayer games</p>
+                      </div>
+                      <p>+$<span class="price">1</span>/mo</p>
+                    </div>
+                
+                    <div class="box jsAddOnBox">
+                      <input type="checkbox" name="Large Storage" value="2">
+                      <div class="content">
+                        <h3>Large storage</h2>
+                        <p>Extra 1TB of cloud save</p>
+                      </div>
+                      <p>+$<span class="price">2</span>/mo</p>
+                    </div>
+                
+                    <div class="box jsAddOnBox">
+                      <input type="checkbox" name="Customizable profile" value="2">
+                      <div class="content">
+                        <h3>Customizable profle</h2>
+                        <p>Custom theme on your profile</p>
+                      </div>
+                      <p>+$<span class="price">2</span>/mo</p>
+                    </div>
+                
+                  </div>
+                </article>
+                <!-- yearly plan selection -->
+                <article class="yearlyplan">
+                  <div class="box-container">
+                    <div class="box jsAddOnBox">
+                      <input type="checkbox" name="Online service" value="10">
+                      <div class="content" >
+                        <h3>Online services</h2>
+                        <p>Access to multiplayer games</p>
+                      </div>
+                      <p>+$<span class="price">10</span>/yr</p>
+                    </div>
+                
+                    <div class="box jsAddOnBox">
+                      <input type="checkbox" name="Large storage" value="20">
+                      <div class="content">
+                        <h3>Large strorage</h2>
+                        <p>Extra 1TB of cloud save</p>
+                      </div>
+                      <p>+$<span class="price">20</span>/yr</p>
+                    </div>
+                
+                    <div class="box jsAddOnBox">
+                      <input type="checkbox" name="Customizable profile" value="20">
+                      <div class="content">
+                        <h3>Customizable profile</h2>
+                        <p>Custom theme on your profile</p>
+                      </div>
+                      <p>+$<span class="price">20</span>/yr</p>
+                    </div>
+                
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="btn-container">
+              <button class="btn-back" type="submit">Go Back</button>
+              <button class="btn-next add-on-btn" type="submit">Next Step</button>
+            </div>
+
+          </div>
+          
+      
+          <!-- begining of single form 4-->
+          <div class="innerform-wrapper">
+            <h1 class="heading">Finishing Up</h1>
+            <p>Double-check everything looks OK before confirming.</p>
+            <div class="main-form">
+              <div class="finishing-up">
+                <!-- monthly plan selection -->
+                <article class="monthlyplan">
+                  <div class="box-container finishing-up-item-wrapper">
+                    
+
+                  </div>
+                  
+                </article>
+              </div>
+      
+            </div>
+
+            <div class="btn-container">
+              <button class="btn-back" type="submit">Go Back</button>
+              <button class="btn-next confirmBtn" type="submit">Confirm</button>
+            </div>
+
+          </div>
+          
+          <div class="thank-you innerform-wrapper">
+            <div class="container">
+              <img src="../assets/images/icon-thank-you.svg" alt="">
+              <h1>Thank you!</h1>
+              <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support,
+                Please
+                feel free to email us at support@loremgaming.com</p>
+            </div>
+          </div>
+      
+        </div>
+      
+      </section>
+      
+
+  </main>
+
+
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
