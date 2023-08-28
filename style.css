@@ -58,7 +58,7 @@ main{
 sidebar{
     position: absolute;
     border-radius: .5rem;
-    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    background-image: url(images/bg-sidebar-desktop.svg);
     background-position: bottom;
     bottom: 1rem;
     top: 1rem;
@@ -231,6 +231,11 @@ button.btn-back{
 
 
 /* select your plan begins */
+
+
+.jsAddOnBox input{
+    pointer-events: none;
+}
 
 .plan-wrapper .box-container{
     padding-top: 1rem;
@@ -558,7 +563,7 @@ form span{
     top: 0;
     left: 0;
     height: 12rem;
-    background-image: url(assets/images/bg-sidebar-mobile.svg);
+    background-image: url(images/bg-sidebar-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
